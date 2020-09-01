@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class EmployeeController {
     @GetMapping("/")
-    public String list(ModelMap map){
+    public String deptList(ModelMap map){
         map.put("employees",employeeRepository.findAll());
         return "list";
     }
